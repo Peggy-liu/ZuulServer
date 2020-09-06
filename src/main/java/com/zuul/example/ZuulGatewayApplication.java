@@ -20,10 +20,6 @@ public class ZuulGatewayApplication {
 		SpringApplication.run(ZuulGatewayApplication.class, args);
 	}
 	
-	public static class BazServiceList extends ConfigurationBasedServerList {
-		public BazServiceList(IClientConfig config) {
-			super.initWithNiwsConfig(config);
-		}
-	}
+	
 
 }

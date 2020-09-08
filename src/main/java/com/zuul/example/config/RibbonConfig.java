@@ -27,7 +27,7 @@ public class RibbonConfig {
 	/**
 	 * 
 	 * @param config
-	 * @return change default load balancer(round robin) to this new load balancer.
+	 * @return change default load balancer(round robin) to this new load balancer rule.
 	 *         AvailabilityFilteringRule:
 	 *         will use Ribbon’s built-in circuit breaker functionality to filter
 	 *         out any servers in an “open-circuit” state: if a ping fails to
@@ -39,6 +39,7 @@ public class RibbonConfig {
 	public IRule ribbonRule(IClientConfig config) {
 		AvailabilityFilteringRule rule = new AvailabilityFilteringRule();
 		rule.initWithNiwsConfig(config);
+	
 		return rule;
 	}
 

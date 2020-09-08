@@ -18,10 +18,15 @@ eureka:
 spring:
   application:
     name: Zuul-Gateway
+  sleuth:
+    sampler:
+      rate: 100
     
 management:
   endpoints:
     web:
       exposure:
         include: '*'
+        
+
         
